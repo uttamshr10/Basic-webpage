@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="logo">uttamshr</h1>
-    </div>
-    <nav>
-        <ul>
+    <header>
+        <div class="container">
+          <h1 class="logo">uttamshr</h1>
+        </div>
+        <nav>
+          <ul>
             <li><a href="about-me.html">About</a></li>
             <li><a href="images.html">My Work</a></li>
             <li><a href="social-media.html">Social Media</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+          </ul>
+        </nav>
+      </header>
+      <hr>
     <div class="form">
         <fieldset>
             <legend><h1 class="contact">Contact Form</h1></legend>
@@ -36,15 +39,15 @@
                 <input type="email" id="email" name="email-address">
             </div>
             <div>
-                <input type="checkbox">
+                <label for="comments">Your comments</label><br>
+                <textarea name="comments" id="comments" cols="37" rows="8">Hey Uttam, Can we work together?</textarea>
+            </div>
+            <div>
+                <input class="coding" type="checkbox">
                 <label for="interest">Do you love coding?</label>
             </div>
             <div>
-                <label for="comments">Your comments</label>
-                <textarea name="comments" id="comments">Hey Uttam, Can we work together?</textarea>
-            </div>
-            <div>
-                <button type="submit" id="button">Submit</button>
+                <button type="button">Submit</button>
             </div>
         </fieldset>
     </div>

@@ -6,53 +6,30 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
+/* Typography */
 p {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-h1, h2, li {
+h1, h2, li, label, textarea, button, .info {
     font-family: "Source Code Pro", monospace;
 }
 
-section {
-    padding: 5em 2em;
+hr {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
-    display: block;
     max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 
-.introduction {
-position: relative;
-
-}
-
-.introduction__img {
-    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
-}
-
-@media (min-width: 600px) {
-    .introduction {
-        display: grid;
-        width: min-content;
-        grid-column-gap: 1em;
-        margin: 0 auto;
-        grid-template-areas: 
-            'img title';
-        grid-template-columns: min-content max-content;
-    }
-    .introduction__img {
-        grid-area: img;
-        min-width: 450px;
-        position: relative;
-        z-index: 2;
-    }
-}
+/* Navigation and Headers */
 
 .container {
     width: 80%;
@@ -63,6 +40,7 @@ position: relative;
 .logo {
     float: left;
     padding: 30px 15px;
+    user-select: none;
 }
 
 header::after {
@@ -71,11 +49,16 @@ header::after {
     clear: both;
 }
 
+header {
+    color: #fff;
+    background: #000;
+}
+
 nav {
     float: right;
 }
 
-nav ul {
+nav ul, div ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -90,27 +73,76 @@ nav li {
 }
  
 nav a {
-    text-decoration: none;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
     font-size: 15px;
 }
 
-.heading {
-    text-align: center;
-    margin-top: 1%;
-}
+/* About Me */
 
 .text {
-    padding: 15px 2% 15px 2%;
+    padding: 15px 2%;
+    background: black;
+    color: white;
 }
 
-.hello {
-    padding-top: 15px;
+.me {
+    position:relative;
+    margin: 20px 0;
+    left: 35%;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,0.25);
 }
+
+.info {
+    padding: 20px 28%;
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+.name {
+    padding: 0 29%;
+}
+
+/* Projects */
+
+.projects {
+    padding: 2%;
+}
+
+/* Social Media */
+
+.media {
+    margin: 15px;
+}
+
+div ul {
+    padding-left: 20px;
+}
+
+div ul li {
+    padding-top: 15px;
+    text-decoration: none;
+}
+
+div ul li a {
+    color: black;
+    font-size: 25px;
+}
+
+/* Contact */
 
 .form {
-  padding: 150px;  
+  padding: 120px;  
+  background-color: black;
+  color: white;
+}
+
+.coding {
+    margin: 15px 0;
+    padding: 15px 0;
 }
 
 legend {
@@ -122,7 +154,11 @@ fieldset {
 }
 
 label {
-    font-size: 20px;
+    font-size: 25px;
+}
+
+input, fieldset, textarea {
+    border-radius: 5px;
 }
 
 input {
@@ -132,12 +168,12 @@ input {
 
 button {
     padding: 5px;
-    color: #000;
-    background: rebeccapurple;
-    border-radius: 6px;
-    margin-top: 10px;
+    font-size: 20px;
 }
 
-#button {
-    font-size: 20px;
+button:hover {
+    color: white;
+    border-color: white;
+    background: black;
+    border-radius: 5px;
 }
